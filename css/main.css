@@ -127,11 +127,28 @@ label {
   color: grey;
 }
 
+:root {
+  --background-color: #fff;
+  --text-color: #000;
+  --h1__dark-color: #005E94;
+}
+[data-theme="dark"] {
+  --background-color: #3F3F3F;
+  --text-color: #fff;
+  --aside-color: #fff;
+  --main_a_color: #fff;
+  --h1__dark-color: #fff;
+}
+body {
+  color: var(--text-color);
+  background-color: var(--background-color);
+  font-weight: 700;
+}
+
 html {
   font-family: 'Work Sans', sans-serif;
   font-weight: 400;
   font-size: 1.2rem;
-  color: #000;
   letter-spacing: normal;
 }
 
@@ -168,7 +185,7 @@ html {
   padding: 1rem 0 2.2rem 0;
   -ms-grid-column-align: center;
       justify-self: center;
-  color: #005E94;
+  color: var(--h1__dark-color);
 }
 
 .header .twitter__icon {
@@ -215,6 +232,7 @@ html {
   text-decoration: none;
   border-bottom: 1px solid #E9897E;
   padding-bottom: 5px;
+  color: var(--main_a_color);
 }
 
 .main .card a:hover {
@@ -264,7 +282,7 @@ html {
 }
 
 .aside a {
-  color: royalblue;
+  color: var(--aside_linkscolor);
 }
 
 .aside a:hover {
@@ -283,7 +301,7 @@ html {
   padding-bottom: 1rem;
   line-height: 1.5;
   letter-spacing: 0.09rem;
-  color: #000;
+  color: var(--aside-color);
 }
 
 .aside__content {
