@@ -108,6 +108,7 @@ form {
       align-self: center;
   /* background-color: #FFBF86; */
   background-color: #fff;
+  z-index: 2;
 }
 
 form .airform-btn {
@@ -139,7 +140,7 @@ form .airform-btn {
   border-radius: 5px;
   max-width: 350px;
   /*  background-color: #FFBF86; */
-  margin: 1rem auto 1rem auto;
+  margin: 1rem 0 1rem 240px;
 }
 
 input,
@@ -175,8 +176,42 @@ label {
   display: flex;
   -ms-flex-item-align: center;
       align-self: center;
-  margin-top: 0.5rem;
-  color: grey;
+  margin: 0.1rem 0 1rem 0;
+  color: #272727;
+  z-index: 3;
+}
+
+.footer__content {
+  position: relative;
+  border-bottom: 5px solid #1976d2;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.footer__content img {
+  width: 100%;
+}
+
+.footer__content::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #90BAFE;
+  opacity: 1;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.footer__content:hover::after {
+  top: 0;
+  opacity: 0.9;
+}
+
+.footer__content:hover .card__list .card__li a {
+  opacity: 1;
 }
 
 html {
@@ -380,6 +415,35 @@ html {
   border-top: 1px dashed #1976d2;
 }
 
+.footer__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer__content .made {
+  z-index: 3;
+  font-weight: 300;
+  font-style: italic;
+  color: #272727;
+  margin: auto 0 1rem 1rem;
+}
+
+.footer__content .made__list-item {
+  padding-bottom: 0.5rem;
+}
+
+.footer__content .made__list-link {
+  color: #272727;
+  text-decoration: none;
+  border-bottom: 1px solid #FF6347;
+}
+
+.footer__content .made h6 {
+  font-weight: 400;
+  padding-bottom: 0.5rem;
+}
+
 .layouts {
   padding-top: 1rem;
 }
@@ -456,6 +520,27 @@ html {
     display: -ms-flexbox;
     display: flex;
     padding: 0.8rem 0 1.6rem 2rem;
+  }
+  .footer__content {
+    display: -ms-grid;
+    display: grid;
+    justify-items: center;
+  }
+  .footer .form-container {
+    margin-left: 0;
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+  }
+  .footer .made__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .footer .made__list-item {
+    margin-right: 0.5rem;
   }
 }
 /*# sourceMappingURL=main.css.map */
