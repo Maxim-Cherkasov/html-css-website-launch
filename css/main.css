@@ -52,6 +52,7 @@
 
 [data-theme="dark"] .header .top__icons .theme-btn .mode-white {
   display: block;
+  width: 2.2rem;
 }
 
 [data-theme="dark"] .header h1 {
@@ -272,7 +273,7 @@ label {
 }
 
 .header .top__icons .theme-btn .material-icons {
-  font-size: 2rem;
+  width: 2.21rem;
 }
 
 .header .top__icons .theme-btn .mode-white {
@@ -541,6 +542,9 @@ html {
         -ms-flex-order: -1;
             order: -1;
   }
+  .footer h6 {
+    margin: 1rem;
+  }
   .footer .footer__content .made {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -552,6 +556,7 @@ html {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    margin-top: 1rem;
   }
   .footer .footer__content .made .made__list-item {
     margin-right: 0.5rem;
